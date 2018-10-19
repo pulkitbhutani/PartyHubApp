@@ -1,0 +1,2 @@
+# PartyHubApp
+host parties
