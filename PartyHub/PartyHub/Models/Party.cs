@@ -25,6 +25,9 @@ namespace PartyHub.Models
         public string Description { get; set; }
 
         [Required]
+        [StringLength(255)]
         public string Venue { get; set; }
+        
+
     }
 }
