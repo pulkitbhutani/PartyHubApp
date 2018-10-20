@@ -204,10 +204,19 @@
     <Compile Include="Migrations\201810200713472_initialModel.Designer.cs">
       <DependentUpon>201810200713472_initialModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201810200746274_createpartytable.cs" />
+    <Compile Include="Migrations\201810200746274_createpartytable.Designer.cs">
+      <DependentUpon>201810200746274_createpartytable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810200753549_validationsondb.cs" />
+    <Compile Include="Migrations\201810200753549_validationsondb.Designer.cs">
+      <DependentUpon>201810200753549_validationsondb.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Party.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -290,6 +299,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201810200713472_initialModel.resx">
       <DependentUpon>201810200713472_initialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810200746274_createpartytable.resx">
+      <DependentUpon>201810200746274_createpartytable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810200753549_validationsondb.resx">
+      <DependentUpon>201810200753549_validationsondb.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
