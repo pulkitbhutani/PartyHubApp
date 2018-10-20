@@ -29,10 +29,9 @@ namespace PartyHub.Controllers
         public ActionResult Create(PartyFormViewModel viewModel)
         {
             var hostId = User.Identity.GetUserId();
-            var host = _context.Users.Single(u => u.Id == hostId);
             var party = new Party
             {
-                Host = host,
+                HostId = hostId,
                 Title = viewModel.Title,
                 Description = viewModel.Description,
                 Venue = viewModel.Venue,

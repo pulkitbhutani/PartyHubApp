@@ -217,6 +217,10 @@
     <Compile Include="Migrations\201810200906151_addedvenuestring.Designer.cs">
       <DependentUpon>201810200906151_addedvenuestring.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201810201130313_addhostid.cs" />
+    <Compile Include="Migrations\201810201130313_addhostid.Designer.cs">
+      <DependentUpon>201810201130313_addhostid.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -315,6 +319,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201810200906151_addedvenuestring.resx">
       <DependentUpon>201810200906151_addedvenuestring.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810201130313_addhostid.resx">
+      <DependentUpon>201810201130313_addhostid.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

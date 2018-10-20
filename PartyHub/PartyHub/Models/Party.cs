@@ -11,8 +11,10 @@ namespace PartyHub.Models
 
         public int Id { get; set; }
 
-        [Required]
         public ApplicationUser Host { get; set; }
+
+        [Required]
+        public string HostId { get; set; }
 
         [Required]
         public DateTime DateTime { get; set; }
