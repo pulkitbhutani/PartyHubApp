@@ -42,5 +42,23 @@ namespace PartyHub.Controllers
             _context.SaveChanges();
             return RedirectToAction("Index", "Home");
         }
+
+        [Authorize]
+        public ActionResult Mine()
+        {
+            var user = User.Identity.GetUserId();
+
+            var myparties = _context.Parties.Where(r => r.HostId == user && r.DateTime > DateTime.Now).ToList();
+
+            return View(myparties);
+        }
+
+        [Authorize]
+        public ActionResult PartyPage(int id)
+        {
+            var partypage = _context.Parties.Single(g => g.Id == id);
+
+            return View(partypage);
+        }
     }
 }

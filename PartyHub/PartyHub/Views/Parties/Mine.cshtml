@@ -1,0 +1,32 @@
+﻿@model IEnumerable<PartyHub.Models.Party>
+@{
+    ViewBag.Title = "Mine";
+}
+
+<h2>My Up Coming Parties</h2>
+
+<div class="event-list-div">
+    <ul class="party-listing-container">
+        @foreach (var party in Model)
+        {
+            <li class="party-listing row">
+                <div class="date col-sm-2">
+                    <div class="month">
+                        @party.DateTime.ToString("MMM")
+                    </div>
+                    <div class="day">
+                        @party.DateTime.ToString("d ")
+                    </div>
+                </div>
+                <div class="details col-sm-10">
+                    <div class="title">
+                        @party.Title
+                    </div>
+                    <div>
+                        @party.Venue
+                    </div>
+                </div>
+            </li>
+        }
+    </ul>
+</div>

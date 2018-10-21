@@ -1,10 +1,38 @@
-﻿@{
+﻿@model PartyHub.ViewModels.HomeViewModel
+@{
     ViewBag.Title = "Party Hub";
 }
 
-<div class="jumbotron">
-    <h1>Party Hub</h1>
-    <p class="lead">Party Hub is a way to meet new people with similar interests by hosting house parties in your city. Host parties where people can come and talk about similar interests and share thier experiences</p>
-    <p><a href="http://localhost:65424/Account/Login" class="btn btn-primary btn-lg">Login &raquo;</a></p>
-    <p><a href="http://localhost:65424/Account/Register" class="btn btn-primary btn-lg">Register &raquo;</a></p>
+<div class="container home-div">
+    <div>
+        <h1>Parties Planned</h1>
+    </div>
+        <div class="event-list-div">
+        <ul class="party-listing-container">
+            @foreach (var party in Model.UpcomingParties)
+            {
+                <li class="party-listing row">
+                    <div class="date col-sm-2">
+                        <div class="month">
+                            @party.DateTime.ToString("MMM")
+                        </div>
+                        <div class="day">
+                            @party.DateTime.ToString("d ")
+                        </div>
+                    </div>
+                    <div class="details col-sm-10">
+                        <div>
+                            @party.Host.UserName
+                        </div>
+                        <div class="title">
+                            <a href="@Url.Action("PartyPage", "Parties", new { id =  party.Id },null)">@party.Title</a>
+                        </div>
+                        <div>
+                            @party.Venue
+                        </div>
+                    </div>
+                </li>
+            }
+        </ul>
+    </div>
 </div>
